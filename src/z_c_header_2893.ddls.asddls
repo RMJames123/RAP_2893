@@ -1,11 +1,17 @@
 @AccessControl.authorizationCheck: #NOT_REQUIRED
-@EndUserText.label: 'Header - Inteface Root Entity'
+@EndUserText.label: 'Header - Consumption Entity'
 @Metadata.ignorePropagatedAnnotations: true
-define root view entity Z_I_HEADER_2893
-  provider contract transactional_interface
+
+@Metadata.allowExtensions: true
+@Search.searchable: true
+
+define root view entity Z_C_HEADER_2893
+  provider contract transactional_query
   as projection on Z_R_HEADER_2893
 {
   key HeaderUuid,
+
+      @Search.defaultSearchElement: true
       Id,
       Email,
       Firstname,
@@ -15,14 +21,14 @@ define root view entity Z_I_HEADER_2893
       Deliverydate,
       Orderstatus,
       Imageurl,
-      
+
       @Semantics.systemDateTime.localInstanceLastChangedAt: true
       LocalLastChangedAt,
-      
+
       @Semantics.systemDateTime.lastChangedAt: true
       LastChangedAt,
-      
+
       /* Associations */
       _Customer,
-      _Items : redirected to composition child Z_I_ITEMS_2893
+      _Items : redirected to composition child Z_C_ITEMS_2893
 }

@@ -1,0 +1,67 @@
+@Metadata.layer: #CORE
+@UI: { headerInfo: { typeName: 'Item',
+                     typeNamePlural: 'Items',
+                     title: { type: #STANDARD,
+                              value: 'Name' }
+                   }
+     }
+
+annotate entity Z_C_ITEMS_2893 with
+{
+  @UI.hidden: true
+  ItemUuid;
+
+  @UI.hidden: true
+  HeaderUuid;
+
+  @UI: { lineItem: [{ position: 10, importance: #HIGH  }],
+          identification: [{ position: 10 }]
+        }
+  Name;
+
+  @UI: { lineItem: [{ position: 10, importance: #HIGH  }],
+          identification: [{ position: 10 }]
+        }
+  Description;
+
+  @UI: { lineItem: [{ position: 10, importance: #HIGH  }],
+          identification: [{ position: 10 }]
+        }
+  Releasedate;
+
+  @UI: { lineItem: [{ position: 10, importance: #HIGH  }],
+          identification: [{ position: 10 }]
+        }
+  Discontinueddate;
+
+  @UI: { lineItem: [{ position: 10, importance: #HIGH  }],
+          identification: [{ position: 10 }]
+        }
+  Price;
+
+  @UI: { lineItem: [{ position: 10, importance: #HIGH  }],
+          identification: [{ position: 10 }]
+        }
+  Height;
+
+  @UI: { lineItem: [{ position: 10, importance: #HIGH  }],
+          identification: [{ position: 10 }]
+        }
+  Width;
+
+  @UI: { lineItem: [{ position: 10, importance: #HIGH  }],
+          identification: [{ position: 10 }]
+        }
+  Depth;
+
+  @UI: { lineItem: [{ position: 10, importance: #HIGH  }],
+          identification: [{ position: 10 }]
+        }
+  Quantity;
+
+  @UI: { lineItem: [{ position: 10, importance: #HIGH  }],
+          identification: [{ position: 10 }]
+        }
+  Unitofmeasure;
+
+}

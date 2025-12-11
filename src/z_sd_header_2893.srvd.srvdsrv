@@ -1,0 +1,6 @@
+@EndUserText.label: 'Header - Service Definition'
+define service Z_SD_HEADER_2893
+  provider contracts odata_v4_ui {
+  expose Z_C_HEADER_2893 as Header;
+  expose Z_C_ITEMS_2893  as Items;
+}
