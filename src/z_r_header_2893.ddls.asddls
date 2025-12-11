@@ -5,6 +5,8 @@ define root view entity Z_R_HEADER_2893
   as select from zheader_2893
   
   composition [1..*] of Z_R_ITEMS_2893 as _Items
+  
+  association [0..1] to Z_R_CUSTOMER_2893 as _Customer on $projection.Email = _Customer.Email
 
 {
   key header_uuid  as HeaderUuid,
@@ -18,6 +20,7 @@ define root view entity Z_R_HEADER_2893
       orderstatus  as Orderstatus,
       imageurl     as Imageurl,
       
-      _Items
+      _Items,
+      _Customer
 
 }

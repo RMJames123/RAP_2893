@@ -3,13 +3,10 @@
 {
 "FROM":
 [
-"ZITEMS_2893"
+"ZCUSTOMER_2893"
 ],
 "ASSOCIATED":
-[
-"Z_R_HEADER_2893",
-"Z_R_PRODUCTS_2893"
-],
+[],
 "BASE":
 [],
 "ANNO_REF":
