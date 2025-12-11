@@ -19,48 +19,48 @@ annotate entity Z_C_ITEMS_2893 with
         }
   Name;
 
-  @UI: { lineItem: [{ position: 10, importance: #HIGH  }],
-          identification: [{ position: 10 }]
+  @UI: { lineItem: [{ position: 20, importance: #HIGH  }],
+          identification: [{ position: 20 }]
         }
   Description;
 
-  @UI: { lineItem: [{ position: 10, importance: #HIGH  }],
-          identification: [{ position: 10 }]
+  @UI: { lineItem: [{ position: 30, importance: #HIGH  }],
+          identification: [{ position: 30 }]
         }
   Releasedate;
 
-  @UI: { lineItem: [{ position: 10, importance: #HIGH  }],
-          identification: [{ position: 10 }]
+  @UI: { lineItem: [{ position: 40, importance: #HIGH  }],
+          identification: [{ position: 40 }]
         }
   Discontinueddate;
 
-  @UI: { lineItem: [{ position: 10, importance: #HIGH  }],
-          identification: [{ position: 10 }]
+  @UI: { lineItem: [{ position: 50, importance: #HIGH  }],
+          identification: [{ position: 50 }]
         }
   Price;
 
-  @UI: { lineItem: [{ position: 10, importance: #HIGH  }],
-          identification: [{ position: 10 }]
+  @UI: { lineItem: [{ position: 60, importance: #HIGH  }],
+          identification: [{ position: 60 }]
         }
   Height;
 
-  @UI: { lineItem: [{ position: 10, importance: #HIGH  }],
-          identification: [{ position: 10 }]
+  @UI: { lineItem: [{ position: 70, importance: #HIGH  }],
+          identification: [{ position: 70 }]
         }
   Width;
 
-  @UI: { lineItem: [{ position: 10, importance: #HIGH  }],
-          identification: [{ position: 10 }]
+  @UI: { lineItem: [{ position: 80, importance: #HIGH  }],
+          identification: [{ position: 80 }]
         }
   Depth;
 
-  @UI: { lineItem: [{ position: 10, importance: #HIGH  }],
-          identification: [{ position: 10 }]
+  @UI: { lineItem: [{ position: 90, importance: #HIGH  }],
+          identification: [{ position: 90 }]
         }
   Quantity;
 
-  @UI: { lineItem: [{ position: 10, importance: #HIGH  }],
-          identification: [{ position: 10 }]
+  @UI: { lineItem: [{ position: 100, importance: #HIGH  }],
+          identification: [{ position: 100 }]
         }
   Unitofmeasure;
 

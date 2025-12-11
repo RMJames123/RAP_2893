@@ -14,10 +14,11 @@ CLASS zcl_load_data_2893 IMPLEMENTATION.
   METHOD if_oo_adt_classrun~main.
 
 
-    DATA: lt_header   TYPE TABLE OF zheader_2893,
-          lt_items    TYPE TABLE OF zitems_2893,
-          lt_customer TYPE TABLE OF zcustomer_2893,
-          lt_products TYPE TABLE OF zproducts_2893.
+    DATA: lt_header    TYPE TABLE OF zheader_2893,
+          lt_items     TYPE TABLE OF zitems_2893,
+          lt_customer  TYPE TABLE OF zcustomer_2893,
+          lt_products  TYPE TABLE OF zproducts_2893,
+          lt_orderstat TYPE TABLE OF zorderstat_2893.
 
 
     DATA(lv_header_uuid) = cl_system_uuid=>create_uuid_x16_static(  ).
@@ -32,7 +33,7 @@ CLASS zcl_load_data_2893 IMPLEMENTATION.
      country = 'Argentina'
      createon = '20251209'
      deliverydate = '20251209'
-     orderstatus = 'open'
+     orderstatus = 'Open'
      imageurl = 'https://rauljaramillo.neylify.app'
      )
      ).
@@ -133,6 +134,15 @@ CLASS zcl_load_data_2893 IMPLEMENTATION.
     DELETE FROM zproducts_2893.
     INSERT zproducts_2893 FROM TABLE @lt_products.
 
+    lt_orderstat = VALUE #(
+
+    ( id = 'Open' description = 'Open Order' )
+    ( id = 'Accept' description = 'Order Accepted' )
+    ( id = 'Reject' description = 'Order Rejected' )
+     ).
+
+    DELETE FROM zorderstat_2893.
+    INSERT zorderstat_2893 FROM TABLE @lt_orderstat.
 
   ENDMETHOD.
 
