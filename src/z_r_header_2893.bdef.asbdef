@@ -31,6 +31,8 @@ etag master LocalLastChangedAt
   FirstName,
   LastName;
 
+field ( features : instance ) Email;
+
   action ( features : instance, authorization : update ) acceptOrder result [1] $self;
   action ( features : instance, authorization : update ) rejectOrder result [1] $self;
 
@@ -45,7 +47,7 @@ etag master LocalLastChangedAt
   draft action Activate optimized;
   draft action Discard;
 
-determine action validateOrderCustomer { validation validateCustomer; }
+  determine action validateOrderCustomer { validation validateCustomer; }
 
   side effects
   {
@@ -81,7 +83,7 @@ determine action validateOrderCustomer { validation validateCustomer; }
 
 }
 
-define behavior for Z_R_ITEMS_2893 alias items
+define behavior for Z_R_ITEMS_2893 alias Items
 implementation in class zbp_r_items_2893 unique
 persistent table zitems_2893
 draft table zitems_2893d
@@ -98,6 +100,8 @@ etag master LocalLastChangedAt
   field ( readonly ) HeaderUuid, Id, LocalLastChangedAt;
 
   field ( mandatory ) Name, Price, Quantity;
+
+  determination setItemNumber on save { create; }
 
   determination CalculateTotalPrice on modify { create; field Price, Quantity; }
 

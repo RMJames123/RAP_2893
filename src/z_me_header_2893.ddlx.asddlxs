@@ -78,20 +78,17 @@ annotate entity Z_C_HEADER_2893 with
   Lastname;
 
   @UI: { lineItem: [{ position: 50, importance: #HIGH } ],
-         identification: [{ position: 50 }              ],
-         selectionField: [{ position: 50 }              ]
+         identification: [{ position: 50 }              ]
        }
   Country;
 
   @UI: { lineItem: [{ position: 60, importance: #HIGH } ],
-         identification: [{ position: 60 }              ],
-         selectionField: [{ position: 60 }              ]
+         identification: [{ position: 60 }              ]
        }
   Createon;
 
   @UI: { lineItem: [{ position: 70, importance: #HIGH } ],
-         identification: [{ position: 70 }              ],
-         selectionField: [{ position: 70 }              ]
+         identification: [{ position: 70 }              ]
        }
   Deliverydate;
 
@@ -102,9 +99,14 @@ annotate entity Z_C_HEADER_2893 with
   Orderstatus;
 
   @UI: { lineItem: [{ position: 90, importance: #HIGH } ],
-         identification: [{ position: 90 }              ],
-         selectionField: [{ position: 90 }              ]
+         identification: [{ position: 90 }              ]
        }
   Imageurl;
 
+  @UI: { lineItem: [{ position: 100, importance: #HIGH } ],
+         identification: [{ position: 100 }              ],
+         selectionField: [{ position: 100 }              ]
+       }
+  @EndUserText.label: 'Total Order'
+  TotalPrice;
 }

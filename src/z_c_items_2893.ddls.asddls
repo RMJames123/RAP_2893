@@ -10,9 +10,41 @@ define view entity Z_C_ITEMS_2893
 {
   key ItemUuid,
       HeaderUuid,
+      
+      @Search.defaultSearchElement: true
       Id,
       
       @Search.defaultSearchElement: true
+          @ObjectModel.text.element: [ 'Name' ]
+          @Consumption.valueHelpDefinition: [{ entity: { name: 'Z_I_Products_2893',
+                                                         element: 'Name'},
+                                               additionalBinding: [{ localElement: 'Description',
+                                                                     element: 'Description',
+                                                                     usage: #RESULT  }, 
+                                                                   { localElement: 'Releasedate',
+                                                                     element: 'Releasedate',
+                                                                     usage: #RESULT  },
+                                                                   { localElement: 'Discontinueddate',
+                                                                     element: 'Discontinueddate',
+                                                                     usage: #RESULT  },
+                                                                   { localElement: 'Price',
+                                                                     element: 'Price',
+                                                                     usage: #RESULT  },
+                                                                   { localElement: 'Height',
+                                                                     element: 'Height',
+                                                                     usage: #RESULT  },
+                                                                   { localElement: 'Width',
+                                                                     element: 'Width',
+                                                                     usage: #RESULT  },
+                                                                   { localElement: 'Depth',
+                                                                     element: 'Depth',
+                                                                     usage: #RESULT  },
+                                                                   { localElement: 'Unitofmeasure',
+                                                                     element: 'Unitofmeasure',
+                                                                     usage: #RESULT  }
+                                                                     ],
+                                               useForValidation: true }]
+
       Name,
       Description,
       Releasedate,

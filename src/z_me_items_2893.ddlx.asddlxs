@@ -1,66 +1,89 @@
 @Metadata.layer: #CORE
+
 @UI: { headerInfo: { typeName: 'Item',
                      typeNamePlural: 'Items',
                      title: { type: #STANDARD,
-                              value: 'Name' }
-                   }
+                              value: 'Id' }
+                   },
+       presentationVariant: [{ visualizations: [{ type: #AS_LINEITEM }],
+                               sortOrder: [{ by: 'Id',
+                                             direction: #DESC
+                                           }
+                                          ]
+                             }
+                            ]
      }
 
 annotate entity Z_C_ITEMS_2893 with
 {
+
+  @UI.facet: [{ id:       'Items',
+                  purpose:  #STANDARD,
+                  type:     #IDENTIFICATION_REFERENCE,
+                  label:    'Items',
+                  position: 10
+                    }]
+
+
   @UI.hidden: true
   ItemUuid;
 
   @UI.hidden: true
   HeaderUuid;
 
-  @UI: { lineItem: [{ position: 10, importance: #HIGH  }],
-          identification: [{ position: 10 }]
-        }
-  Name;
+  @UI: { lineItem: [{ position: 10, importance: #HIGH }  ],
+         identification: [{ position: 10 }               ],
+         selectionField: [{ position: 10 }              ]
+       }
+  Id;
 
   @UI: { lineItem: [{ position: 20, importance: #HIGH  }],
           identification: [{ position: 20 }]
         }
-  Description;
+  Name;
 
   @UI: { lineItem: [{ position: 30, importance: #HIGH  }],
           identification: [{ position: 30 }]
         }
-  Releasedate;
+  Description;
 
   @UI: { lineItem: [{ position: 40, importance: #HIGH  }],
           identification: [{ position: 40 }]
         }
-  Discontinueddate;
+  Releasedate;
 
   @UI: { lineItem: [{ position: 50, importance: #HIGH  }],
           identification: [{ position: 50 }]
         }
-  Price;
+  Discontinueddate;
 
   @UI: { lineItem: [{ position: 60, importance: #HIGH  }],
           identification: [{ position: 60 }]
         }
-  Height;
+  Price;
 
   @UI: { lineItem: [{ position: 70, importance: #HIGH  }],
           identification: [{ position: 70 }]
         }
-  Width;
+  Height;
 
   @UI: { lineItem: [{ position: 80, importance: #HIGH  }],
           identification: [{ position: 80 }]
         }
-  Depth;
+  Width;
 
   @UI: { lineItem: [{ position: 90, importance: #HIGH  }],
           identification: [{ position: 90 }]
         }
-  Quantity;
+  Depth;
 
   @UI: { lineItem: [{ position: 100, importance: #HIGH  }],
           identification: [{ position: 100 }]
+        }
+  Quantity;
+
+  @UI: { lineItem: [{ position: 110, importance: #HIGH  }],
+          identification: [{ position: 110 }]
         }
   Unitofmeasure;
 

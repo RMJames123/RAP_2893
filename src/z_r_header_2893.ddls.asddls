@@ -19,7 +19,7 @@ define root view entity Z_R_HEADER_2893
       deliverydate          as Deliverydate,
       orderstatus           as Orderstatus,
       imageurl              as Imageurl,
-
+      
       @Semantics.user.createdBy: true
       local_created_by      as LocalCreatedBy,
 

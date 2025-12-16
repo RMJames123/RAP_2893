@@ -27,7 +27,7 @@ CLASS zcl_load_data_2893 IMPLEMENTATION.
      (
      header_uuid = lv_header_uuid
      id = 1
-     email = 'rm.james@hotmail.com'
+     email = 'RM.JAMES@HOTMAIL.COM'
      firstname = 'Raul'
      lastname = 'Jaramillo'
      country = 'Argentina'
@@ -47,7 +47,7 @@ CLASS zcl_load_data_2893 IMPLEMENTATION.
  header_uuid = lv_header_uuid
  id = 1
  name = 'NOTEBOOK DELL INSPIRON GAMER 1'
- description = 'i9 64GB DDR5 2TB SSD GFORCE 4050 15 INCH'
+ description = 'i9 64GB DDR5 2TB SSD GTX 4050 15IN'
  releasedate = '20250101'
  discontinueddate = '20270101'
  price = 4500
@@ -57,6 +57,22 @@ CLASS zcl_load_data_2893 IMPLEMENTATION.
  quantity = 10
  unitofmeasure = 'IN'
   )
+    (
+ item_uuid = cl_system_uuid=>create_uuid_x16_static(  )
+ header_uuid = lv_header_uuid
+ id = 2
+ name = 'NOTEBOOK DELL INSPIRON GAMER 2'
+ description = 'i9 64GB DDR5 2TB SSD GTX 5030 15IN'
+ releasedate = '20250101'
+ discontinueddate = '20280101'
+ price = 5500
+ height = 15
+ width = 20
+ depth = 2
+ quantity = 10
+ unitofmeasure = 'IN'
+  )
+
   ).
 
     DELETE FROM zitems_2893.
@@ -64,35 +80,35 @@ CLASS zcl_load_data_2893 IMPLEMENTATION.
 
     lt_customer = VALUE #(
     (
-    email = 'rm.james@hotmail.com'
+    email = 'RM.JAMES@HOTMAIL.COM'
     firstname = 'Raúl'
     lastname = 'Jaramillo'
     country = 'Argentina'
     imageurl = 'https://rauljaramillo.netlify.app'
      )
     (
-    email = 'merly_8181@hotmail.com'
+    email = 'MERLY_8181@HOTMAIL.COM'
     firstname = 'Merly'
     lastname = 'Sanchez'
     country = 'Argentina'
     imageurl = 'https://rauljaramillo.netlify.app'
      )
     (
-    email = 'alejandra2013@hotmail.com'
+    email = 'ALEJANDRAJS@HOTMAIL.COM'
     firstname = 'Alejandra'
     lastname = 'Jaramillo'
     country = 'Argentina'
     imageurl = 'https://rauljaramillo.netlify.app'
      )
     (
-    email = 'piero_2015@hotmail.com'
+    email = 'PIEROJS@HOTMAIL.COM'
     firstname = 'Piero'
     lastname = 'Jaramillo'
     country = 'Argentina'
     imageurl = 'https://rauljaramillo.netlify.app'
      )
     (
-    email = 'jesus_2020@hotmail.com'
+    email = 'JESUSJS@HOTMAIL.COM'
     firstname = 'Jesús'
     lastname = 'Jaramillo'
     country = 'Argentina'
@@ -108,7 +124,7 @@ CLASS zcl_load_data_2893 IMPLEMENTATION.
     lt_products = VALUE #(
     (
      name = 'NOTEBOOK DELL INSPIRON GAMER 1'
-     description = 'i9 64GB DDR5 2TB SSD GFORCE 4050 15 INCH'
+     description = 'i9 64GB DDR5 2TB SSD GTX 4050 15IN'
      releasedate = '20250101'
      discontinueddate = '20270101'
      price = 4500
@@ -119,7 +135,7 @@ CLASS zcl_load_data_2893 IMPLEMENTATION.
     )
     (
      name = 'NOTEBOOK DELL INSPIRON GAMER 2'
-     description = 'i9 64GB DDR5 2TB SSD GFORCE GTX 5030 15 INCH'
+     description = 'i9 64GB DDR5 2TB SSD GTX 5030 15IN'
      releasedate = '20250101'
      discontinueddate = '20270101'
      price = 5800
